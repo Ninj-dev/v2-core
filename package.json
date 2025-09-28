@@ -1,48 +1,75 @@
 {
-  "name": "@uniswap/v2-core",
-  "description": "🎛 Core contracts for the UniswapV2 protocol",
-  "version": "1.0.1",
-  "homepage": "https://uniswap.org",
+  "name": "lovable-clone",
+  "description": "🚀 AI-Powered Web Development Platform - Clone of lovable.dev",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Ninj-dev/v2-core",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Uniswap/uniswap-v2-core"
+    "url": "https://github.com/Ninj-dev/v2-core"
   },
   "keywords": [
-    "uniswap",
-    "ethereum",
-    "v2",
-    "core",
-    "uniswap-v2"
+    "ai",
+    "web-development",
+    "react",
+    "typescript",
+    "code-generation",
+    "lovable-clone"
   ],
   "files": [
-    "contracts",
-    "build"
+    "frontend",
+    "backend",
+    "shared",
+    "templates",
+    "components"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.5.0",
+    "socket.io": "^4.7.2",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
+    "@types/node": "^20.5.0",
+    "@types/express": "^4.17.17",
+    "@types/cors": "^2.8.13",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/multer": "^1.4.7",
     "chai": "^4.2.0",
-    "ethereum-waffle": "^2.4.1",
-    "ethereumjs-util": "^6.2.0",
     "mocha": "^6.2.2",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
-    "solc": "0.5.16",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
   },
   "scripts": {
-    "lint": "yarn prettier ./test/*.ts --check",
-    "lint:fix": "yarn prettier ./test/*.ts --write",
-    "clean": "rimraf ./build/",
-    "precompile": "yarn clean",
-    "compile": "waffle .waffle.json",
-    "pretest": "yarn compile",
-    "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm start",
+    "build": "npm run backend:build && npm run frontend:build",
+    "backend:build": "cd backend && npm run build",
+    "frontend:build": "cd frontend && npm run build",
+    "start": "npm run backend:start",
+    "backend:start": "cd backend && npm start",
+    "test": "npm run backend:test && npm run frontend:test",
+    "backend:test": "cd backend && npm test",
+    "frontend:test": "cd frontend && npm test",
+    "lint": "npm run backend:lint && npm run frontend:lint",
+    "backend:lint": "cd backend && npm run lint",
+    "frontend:lint": "cd frontend && npm run lint",
+    "clean": "rimraf ./dist/ ./build/ frontend/build/ backend/dist/"
   },
-  "license": "GPL-3.0-or-later"
+  "license": "MIT"
 }

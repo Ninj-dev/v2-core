@@ -1,0 +1,70 @@
+{
+  "name": "lovable-clone-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Lovable Clone - AI-Powered Web Development Platform",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
+    "axios": "^1.5.0",
+    "socket.io-client": "^4.7.2",
+    "@monaco-editor/react": "^4.5.2",
+    "lucide-react": "^0.279.0",
+    "react-query": "^3.39.3",
+    "react-hot-toast": "^2.4.1",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-split-pane": "^0.1.92",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^1.14.0"
+  },
+  "devDependencies": {
+    "react-scripts": "5.0.1",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/node": "^20.5.0",
+    "typescript": "^5.2.2",
+    "tailwindcss": "^3.3.3",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.10",
+    "eslint": "^8.48.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "prettier": "^3.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write src/**/*.{ts,tsx,css,md}"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "ai",
+    "web-development",
+    "code-generation"
+  ],
+  "author": "Lovable Clone Team",
+  "license": "MIT",
+  "description": "Frontend for Lovable Clone - AI-Powered Web Development Platform",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
